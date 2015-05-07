@@ -13,7 +13,6 @@ import javax.media.opengl.glu.GLU;
 import javax.swing.JColorChooser;
 
 import br.furb.cg.n3.core.Desenhador;
-import br.furb.cg.n3.core.EventosAdapter;
 import br.furb.cg.n3.core.Mundo;
 import br.furb.cg.n3.core.ObjetoGrafico;
 import br.furb.cg.n3.core.Ponto;
