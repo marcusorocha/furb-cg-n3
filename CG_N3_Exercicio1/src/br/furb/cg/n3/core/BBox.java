@@ -119,6 +119,12 @@ public class BBox
 		setyMin(yMin);
 	}
 	
+	/**
+	 * Preenche as coordenadas máximas e mínimos dos eixos X e Y 
+	 * com base em uma lista de <code>Ponto</code> 
+	 * 
+	 * @param vertices Lista de <code>Ponto</code>
+	 */
 	public void setCoordenadas(List<Ponto> vertices)
 	{
 		double minX = Integer.MAX_VALUE;
@@ -144,20 +150,37 @@ public class BBox
 		setCoordenadas(minX, maxX, minY, maxY);
 	}
 	
+	/**
+	 * Obter a coordenada central no eixo X  
+	 * 
+	 * @return Coordenada central no eixo X
+	 */
 	public double getCentroX()
 	{
 		return ((xMax - xMin) / 2) + xMin;
 	}
 	
+	/**
+	 * Obter a coordenada central no eixo Y
+	 * 
+	 * @return Coordenada central no eixo Y
+	 */
 	public double getCentroY()
 	{
 		return ((yMax - yMin) / 2) + yMin;
 	}
 	
+	/**
+	 * Obter o <code>Ponto</code> contendo as coordenadas 
+	 * centrais dos eixos X e Y.
+	 * 	
+	 * @return <code>Ponto</code> contendo as coordenadas centrais dos eixos X e Y.
+	 */
 	public Ponto getPontoMedio()
 	{
 		return new Ponto(getCentroX(), getCentroY());
 	}
+	
 	
 	public boolean isPontoDentro(Ponto p)
 	{
