@@ -140,7 +140,7 @@ public class BBox
 	}
 	
 	/**
-	 * Obter a coordenada central no eixo X  
+	 * Obtem a coordenada central no eixo X  
 	 * 
 	 * @return Coordenada central no eixo X
 	 */
@@ -150,7 +150,7 @@ public class BBox
 	}
 	
 	/**
-	 * Obter a coordenada central no eixo Y
+	 * Obtem a coordenada central no eixo Y
 	 * 
 	 * @return Coordenada central no eixo Y
 	 */
@@ -160,7 +160,7 @@ public class BBox
 	}
 	
 	/**
-	 * Obter o <code>Ponto</code> contendo as coordenadas 
+	 * Obtem o <code>Ponto</code> contendo as coordenadas 
 	 * centrais dos eixos X e Y.
 	 * 	
 	 * @return <code>Ponto</code> contendo as coordenadas centrais dos eixos X e Y.
@@ -170,10 +170,25 @@ public class BBox
 		return new Ponto(getCentroX(), getCentroY());
 	}
 	
-	
+	/**
+	 * Verifica se as coordendas do <code>Ponto</code> se encontram dentro
+	 * das coordenadas máximas e mínimas da <code>BBox</code>. 
+	 * 
+	 * @param p <code>Ponto</code> com as coordenadas X e Y para verificação
+	 * 
+	 * @return 
+	 * 		Verdadeiro se a seguinte regra for verdade:
+	 * 		Se a coordenada X do <code>Ponto</code> p for MAIOR QUE o X mínimo 
+	 * 		da <code>BBox</code> e MENOR QUE o X máximo da <code>BBox</code> e
+	 * 		se a coordenada Y do <code>Ponto</code> p for MAIOR QUE o Y mínimo
+	 * 		da <code>BBox</code> e MENOR QUE o Y máximo da <code>BBox</code>
+	 */
 	public boolean isPontoDentro(Ponto p)
 	{
-		return (p.getX() > xMin) && (p.getX() < xMax) && (p.getY() > yMin) && (p.getY() < yMax);
+		return (p.getX() > xMin) && 
+			   (p.getX() < xMax) && 
+			   (p.getY() > yMin) && 
+			   (p.getY() < yMax);
 	}
 	
 	public void desenha(GL gl, GLU glu)
