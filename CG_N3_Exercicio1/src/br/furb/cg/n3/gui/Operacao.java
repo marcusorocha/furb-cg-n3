@@ -1,4 +1,4 @@
-package br.furb.cg.n3.core;
+package br.furb.cg.n3.gui;
 
 import java.awt.event.KeyEvent;
 
@@ -50,6 +50,12 @@ public enum Operacao
 		{		
 			switch(e.getKeyCode())
 			{				
+				case KeyEvent.VK_I: return AFASTAR_CAMERA;
+				case KeyEvent.VK_O: return APROXIMAR_CAMERA;
+				case KeyEvent.VK_E: return MOVER_CAMERA_ESQUERDA;
+				case KeyEvent.VK_D: return MOVER_CAMERA_DIRETA;
+				case KeyEvent.VK_B: return MOVER_CAMERA_ABAIXO;
+				case KeyEvent.VK_C: return MOVER_CAMERA_ACIMA;
 				case KeyEvent.VK_M: return IMPRIMIR_MATRIZ;
 				case KeyEvent.VK_V: return IMPRIMIR_VERTICES;					
 				case KeyEvent.VK_PAGE_DOWN : return REDUZIR;
@@ -60,7 +66,7 @@ public enum Operacao
 				case KeyEvent.VK_DOWN : return MOVER_ABAIXO;					
 				case KeyEvent.VK_ESCAPE : return CANCELAR;
 				case KeyEvent.VK_BACK_SPACE :
-				case KeyEvent.VK_DELETE : return REMOVER;			
+				case KeyEvent.VK_DELETE : return REMOVER;
 			}
 		}
 		

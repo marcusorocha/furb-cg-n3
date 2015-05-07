@@ -1,4 +1,4 @@
-package br.furb.cg.n3.core;
+package br.furb.cg.n3.gui;
 
 public enum Estado
 {

@@ -1,4 +1,4 @@
-package br.furb.cg.n3;
+package br.furb.cg.n3.gui;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -13,11 +13,9 @@ import javax.media.opengl.glu.GLU;
 import javax.swing.JColorChooser;
 
 import br.furb.cg.n3.core.Desenhador;
-import br.furb.cg.n3.core.Estado;
 import br.furb.cg.n3.core.EventosAdapter;
 import br.furb.cg.n3.core.Mundo;
 import br.furb.cg.n3.core.ObjetoGrafico;
-import br.furb.cg.n3.core.Operacao;
 import br.furb.cg.n3.core.Ponto;
 import br.furb.cg.n3.core.RecipienteObjetosGraficos;
 
@@ -216,11 +214,11 @@ public class AmbienteGrafico extends EventosAdapter
 				break;
 				
 			case MOVER_CAMERA_ACIMA :
-				mundo.getCamera().cima();
+				mundo.getCamera().acima();
 				break;
 				
 			case MOVER_CAMERA_ABAIXO :
-				mundo.getCamera().baixo();
+				mundo.getCamera().abaixo();
 				break;
 			
 			default : break;

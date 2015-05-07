@@ -1,4 +1,4 @@
-package br.furb.cg.n3;
+package br.furb.cg.n3.gui;
 
 import java.awt.BorderLayout;
 
