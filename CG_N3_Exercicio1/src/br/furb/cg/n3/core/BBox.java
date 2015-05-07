@@ -13,7 +13,7 @@ public class BBox
 	private double yMax;
 	
 	/**
-	 * Obter a menor coordenada no eixo X
+	 * Obtem a menor coordenada no eixo X
 	 * 
 	 * @return A menor coordenada no eixo X
 	 */
@@ -23,10 +23,9 @@ public class BBox
 	}
 	
 	/**
-	 * Atribuir a menor coordenada no eixo X
+	 * Atribui a menor coordenada no eixo X
 	 * 
-	 * @param xMin 
-	 * 		<code>double</code> contendo a menor coordenada no eixo X
+	 * @param xMin <code>double</code> contendo a menor coordenada no eixo X
 	 */
 	public void setxMin(double xMin)
 	{
@@ -34,7 +33,7 @@ public class BBox
 	}
 	
 	/**
-	 * Obter a maior coordenada no eixo X
+	 * Obtem a maior coordenada no eixo X
 	 * 
 	 * @return A maior coordenada no eixo X
 	 */
@@ -44,10 +43,9 @@ public class BBox
 	}
 	
 	/**
-	 * Atribuir a maior coordenada no eixo X
+	 * Atribui a maior coordenada no eixo X
 	 * 
-	 * @param xMax 
-	 * 		<code>double</code> contendo a maior coordenada no eixo X
+	 * @param xMax <code>double</code> contendo a maior coordenada no eixo X
 	 */
 	public void setxMax(double xMax)
 	{
@@ -55,7 +53,7 @@ public class BBox
 	}
 	
 	/**
-	 * Obter a menor coordenada no eixo Y
+	 * Obtem a menor coordenada no eixo Y
 	 * 
 	 * @return A menor coordenada no eixo Y
 	 */
@@ -65,10 +63,9 @@ public class BBox
 	}
 	
 	/**
-	 * Atribuir a menor coordenada no eixo Y
+	 * Atribui a menor coordenada no eixo Y
 	 * 
-	 * @param yMin 
-	 * 		<code>double</code> contendo a menor coordenada no eixo Y
+	 * @param yMin <code>double</code> contendo a menor coordenada no eixo Y
 	 */
 	public void setyMin(double yMin)
 	{
@@ -76,7 +73,7 @@ public class BBox
 	}
 	
 	/**
-	 * Obter a maior coordenada no eixo Y
+	 * Obtem a maior coordenada no eixo Y
 	 * 
 	 * @return A maior coordenada no eixo Y
 	 */
@@ -86,10 +83,9 @@ public class BBox
 	}
 	
 	/**
-	 * Atribuir a maior coordenada no eixo Y
+	 * Atribui a maior coordenada no eixo Y
 	 * 
-	 * @param yMin 
-	 * 		<code>double</code> contendo a maior coordenada no eixo Y
+	 * @param yMin <code>double</code> contendo a maior coordenada no eixo Y
 	 */
 	public void setyMax(double yMax)
 	{
@@ -97,19 +93,12 @@ public class BBox
 	}
 	
 	/**
-	 * Atribuir todas as coordenadas máximas e mínimas dos eixos X e Y
+	 * Atribui todas as coordenadas máximas e mínimas dos eixos X e Y
 	 * 
-	 * @param xMin 
-	 * 		<code>double</code> contendo a menor coordenada no eixo X
-	 * 
-	 * @param xMax
-	 * 		<code>double</code> contendo a maior coordenada no eixo X
-	 * 
-	 * @param yMin
-	 * 		<code>double</code> contendo a menor coordenada no eixo Y
-	 * 	
-	 * @param yMax
-	 * 		<code>double</code> contendo a maior coordenada no eixo Y
+	 * @param xMin <code>double</code> contendo a menor coordenada no eixo X
+	 * @param xMax <code>double</code> contendo a maior coordenada no eixo X
+	 * @param yMin <code>double</code> contendo a menor coordenada no eixo Y
+	 * @param yMax <code>double</code> contendo a maior coordenada no eixo Y
 	 */
 	public void setCoordenadas(double xMin, double xMax, double yMin, double yMax)
 	{

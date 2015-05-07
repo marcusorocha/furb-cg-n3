@@ -90,26 +90,40 @@ public class ObjetoGrafico extends RecipienteObjetosGraficos
 		gl.glPopMatrix();
 	}
 	
-	public void preencherBBox()
+	private void preencherBBox()
 	{
 		bbox.setCoordenadas(vertices);
 	}
 
+	/**
+	 * Obtem uma referência da BBox do objeto gráfico
+	 * 
+	 * @return Referência da BBox do objeto gráfico
+	 */
 	public BBox getBbox()
 	{	
 		return bbox;
 	}
-
-	public void setBbox(BBox bbox)
-	{
-		this.bbox = bbox;
-	}
 	
+	/**
+	 * Atribui a primitiva gráfica que será utilizada pelo OpenGL 
+	 * para desenhar o objeto gráfico
+	 * 
+	 * @param primitiva Índice da primitiva gráfica do OpenGL 
+	 */
 	public void setPrimitiva(int primitiva)
 	{
 		this.primitiva = primitiva;
 	}
 	
+	/**
+	 * Atribui a <code>Cor</code> que será utilizada juntamente com
+	 * a primitiva no desenho e pintura do objeto gráfico
+	 * 
+	 * @param cor <code>Cor</code> para o objeto gráfico
+	 * 
+	 * @see #setPrimitiva(int)
+	 */
 	public void setCor(Color cor)
 	{
 		if (cor == null)
