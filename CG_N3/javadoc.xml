@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam=" -encoding UTF-8 -charset UTF-8 -docencoding UTF-8" author="true" classpath="jogl.jar:gluegen-rt.jar" destdir="/Users/marcusrocha/Desenvolvimento/FURB/Computacao Grafica/git/furb-cg-n3/JavaDoc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="br.furb.cg.n3.core,br.furb.cg.n3.utils,br.furb.cg.n3.gui" source="1.6" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
