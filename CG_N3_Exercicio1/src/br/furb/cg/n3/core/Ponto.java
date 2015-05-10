@@ -11,17 +11,17 @@ public class Ponto
 	
 	public Ponto()
 	{
-		this(0, 0, 0, 0);
+		this(0, 0, 0, 1.0);
 	}
 	
 	public Ponto(double x, double y)
 	{
-		this(x, y, 0, 0);
+		this(x, y, 0, 1.0);
 	}
 	
 	public Ponto(double x, double y, double z)
 	{
-		this(x, y, z, 0);
+		this(x, y, z, 1.0);
 	}
 	
 	public Ponto(double x, double y, double z, double w)
@@ -72,22 +72,22 @@ public class Ponto
 		this.w = w;
 	}
 	
-	public void exibirCoordenadas()
-	{
-		System.out.println("[" + toString() + "]");
-	}
-	
 	public boolean isPontoProximo(Ponto outro)
 	{
-		double xmax = getX() + (RAIO_PONTO * 2);
-		double xmin = getX() - (RAIO_PONTO * 2);
-		double ymax = getY() + (RAIO_PONTO * 2);
-		double ymin = getY() - (RAIO_PONTO * 2);
+		double xmax = getX() + RAIO_PONTO;
+		double xmin = getX() - RAIO_PONTO;
+		double ymax = getY() + RAIO_PONTO;
+		double ymin = getY() - RAIO_PONTO;
 		
 		return outro.getX() <= xmax && 
 			   outro.getX() >= xmin && 
 			   outro.getY() <= ymax && 
 			   outro.getY() >= ymin;
+	}
+	
+	public void exibirCoordenadas()
+	{
+		System.out.println("[" + toString() + "]");
 	}
 	
 	@Override
