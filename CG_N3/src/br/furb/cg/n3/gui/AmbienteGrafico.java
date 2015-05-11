@@ -159,11 +159,11 @@ public class AmbienteGrafico extends EventosAdapter
 	}
 	
 	private Ponto getPontoDeEventoMouse(MouseEvent e)
-	{
-		int x = (e.getX() - 200) * +2;
-		int y = (e.getY() - 200) * -2;
+	{		
+		double xTela = e.getComponent().getWidth();
+		double yTela = e.getComponent().getHeight();
 		
-		return new Ponto(x, y);
+		return mundo.getCamera().convertePontoTela(e.getX(), e.getY(), xTela, yTela);		
 	}
 	
 	private void atualizarCursor()
@@ -252,8 +252,8 @@ public class AmbienteGrafico extends EventosAdapter
 						case REMOVER :
 							if (!selecionado.removerVerticeSelecionado())
 							{
-								ObjetoGraficoContainer roc = mundo.getRecipiente(selecionado);
-								roc.removerObjeto(selecionado);							
+								ObjetoGraficoContainer roc = mundo.getContainer(selecionado);
+								roc.removerObjeto(selecionado);
 								selecionado = null;
 							}
 							break;

@@ -123,4 +123,29 @@ public class Camera
 		ortho2D_minY += 50.0f;
 		ortho2D_maxY += 50.0f;
 	}
+	
+	/**
+	 * Converte as coordenadas de x e y do clique para as coordenadas do ambiente
+	 * onde se encontra a câmera.
+	 * 
+	 * @param xPonto Coordenada X do clique
+	 * @param yPonto Coordenada Y do clique
+	 * @param xTela Largura total do componente de apresentação do ambiente
+	 * @param yTela Altura total do componente de apresentação do ambiente
+	 * 
+	 * @return Um <code>Ponto</code> com as coordenadas convertidas.
+	 */
+	public Ponto convertePontoTela(double xPonto, double yPonto, double xTela, double yTela)
+	{
+		double xTotal = ortho2D_maxX - ortho2D_minX;
+		double yTotal = ortho2D_maxY - ortho2D_minY;
+		
+		double escalaX = xTotal / xTela;
+		double escalaY = yTotal / yTela;
+
+		double x = ((xPonto * escalaX) + ortho2D_minX);
+		double y = ((yPonto * escalaY) + ortho2D_minY) * -1;
+		
+		return new Ponto(x, y);
+	}
 }
