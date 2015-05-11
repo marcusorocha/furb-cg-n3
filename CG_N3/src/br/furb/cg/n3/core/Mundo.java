@@ -111,32 +111,40 @@ public class Mundo extends ObjetoGraficoContainer
 	}
 	
 	/**
-	 * Função para buscar o recipiente de um objeto gráfico
+	 * Função para buscar o "Container" de um objeto gráfico
+	 * 
 	 * @param o
-	 * @return O reciente de um objeto gráfico
+	 * 		Objeto gráfico contido em algum <code>ObjetoGraficoContainer</code>
+	 * 
+	 * @return Um <code>ObjetoGraficoContainer</code> de um objeto gráfico
 	 */
-	public ObjetoGraficoContainer getRecipiente(ObjetoGrafico o)
+	public ObjetoGraficoContainer getContainer(ObjetoGrafico o)
 	{
-		return getRecipienteR(getObjetos(), o);
+		return getContainerR(this, o);
 	}
 	
 	/**
 	 * Função recursiva para varrer a estrutura de objetos gráficos em busca 
-	 * do recipiente de um objeto gráfico 
-	 * @param listaObjetos
+	 * do "Container" de um objeto gráfico
+	 * 
+	 * @param ogc
+	 * 		<code>ObjetoGraficoCotainer</code> que pode conter o <code>ObjetoGrafico</code>
+	 * 
 	 * @param o
-	 * @return O reciente de um objeto gráfico
+	 * 		<code>ObjetoGrafico</code> contido em algum <code>ObjetoGraficoContainer</code>
+	 * 
+	 * @return O <code>ObjetoGraficoContainer</code> de um objeto gráfico
 	 */
-	private ObjetoGraficoContainer getRecipienteR(List<ObjetoGrafico> listaObjetos, ObjetoGrafico o)
+	private ObjetoGraficoContainer getContainerR(ObjetoGraficoContainer ogc, ObjetoGrafico o)
 	{		
-		for (ObjetoGrafico og : listaObjetos)
+		for (ObjetoGrafico og : ogc.getObjetos())
 		{
 			if (og.equals(o))
 				return this;
 			
-			ObjetoGraficoContainer roc = getRecipienteR(og.getObjetos(), o);
+			ObjetoGraficoContainer result = getContainerR(og, o);
 			
-			if (roc != null) return roc;
+			if (result != null) return result;
 		}
 		
 		return null;
